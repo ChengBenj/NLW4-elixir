@@ -25,11 +25,9 @@ defmodule Rocketpay.Users.Create do
   end
 
   defp run_transaction(multi) do
-    IO.inspect("Executar transaction")
     case Repo.transaction(multi) do
       {:error, _operation, reason, _changes} -> {:error, reason}
       {:ok, %{preload_data: user}} -> {:ok, user}
-      _ -> IO.inspect("What")
     end
   end
 end

@@ -13,6 +13,6 @@ config :logger, level: :warn
 config :rocketpay, Rocketpay.Repo,
   username: "root",
   password: "ava123456",
-  database: "rocketpay_dev",
+  database: "rocketpay_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
